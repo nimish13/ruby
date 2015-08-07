@@ -1,9 +1,9 @@
 class String
 
-  PATTERN = /[a,e,i,o,u]/
+  VOWELS_PATTERN = /[a,e,i,o,u]/
 
-  def replace_vowels(string)
-    string.gsub!(PATTERN, '*')
+  def replace_vowels
+    self.gsub!(VOWELS_PATTERN, '*')
   end
 
 end
