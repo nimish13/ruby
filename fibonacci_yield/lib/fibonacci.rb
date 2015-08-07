@@ -1,6 +1,6 @@
 class Fibonacci
 
-  def fibonacci_yield
+  def series
     val, sum = 0, 1
     while val <= 1000
       yield val
