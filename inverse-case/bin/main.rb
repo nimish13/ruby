@@ -1,4 +1,4 @@
-require_relative "../lib/string.rb"
+require_relative '../lib/string'
 
 string = gets.chomp
-puts string.to_str
+puts string.to_s
