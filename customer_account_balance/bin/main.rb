@@ -1,8 +1,12 @@
-require_relative "../lib/customer_info.rb"
+require_relative '../lib/customer'
 
-customer1 = CustomerInfo.new("Nimish")
-customer2 = CustomerInfo.new("Gaurav")
+customer1 = Customer.new('Nimish')
+customer2 = Customer.new('Gaurav')
+puts customer1
 puts customer1.deposit(3000)
-puts customer1.withdrawl(2000)
+puts customer1.withdraw(2000)
+puts customer1
+puts customer2
 puts customer2.deposit(4000)
-puts customer2.withdrawl(6000)
+puts customer2.withdraw(6000)
+puts customer2
