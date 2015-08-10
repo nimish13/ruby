@@ -1,4 +1,4 @@
-require_relative "hash.rb"
+require_relative 'hash'
 
 class String
 
