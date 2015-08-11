@@ -14,12 +14,14 @@ class Customer
   end
 
   def deposit(amount)
-    return validate_amount(amount) if validate_amount(amount) != nil
+    failed_message = validate_amount(amount)
+    return failed_message if failed_message != nil
     @balance += amount
   end
 
   def withdraw(amount)
-    return validate_amount(amount) if validate_amount(amount) != nil
+    failed_message = validate_amount(amount)
+    return failed_message if failed_message != nil
     if @balance < amount
         'insufficient balance'
       else
@@ -28,9 +30,7 @@ class Customer
   end
 
   def validate_amount(amount)
-    if amount < 0
-      'Failed : Enter positive amount'
-    end
+    'Failed : Enter positive amount' if amount <= 0
   end
 
 end
