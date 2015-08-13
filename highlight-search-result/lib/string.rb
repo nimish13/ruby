@@ -6,7 +6,7 @@ class String
       count_pattern += 1
       "(#{$1})"
     end
-  return str, count_pattern
+    return str, count_pattern
   end
 
 end
