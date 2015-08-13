@@ -1,11 +1,8 @@
 class Array
 
-  def create_hash
+  def group_by_length
     hash = Hash.new { |hash, key| hash[key] = [] }
-    for element in self
-      key = element.to_s.length
-      hash[key] = hash[key].push(element)
-    end
+    each { |element| hash[element.to_s.length].push(element) }
     hash
   end
 
