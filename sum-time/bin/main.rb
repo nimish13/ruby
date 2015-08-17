@@ -1,8 +1,8 @@
 require_relative '../lib/sum_time'
 
 puts 'enter first time'
-time1 = gets.chomp
+first_time = gets.chomp
 puts 'enter second time'
-time2 = gets.chomp
+second_time = gets.chomp
 time = SumTime.new
-p time.add_time(time1, time2)
+puts time.time_parse(first_time, second_time)
