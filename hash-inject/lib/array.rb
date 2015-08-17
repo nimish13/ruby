@@ -7,13 +7,12 @@ class Array
   end
 
   def group_by_parity
-    hash = group_by_length
     parity_hash = Hash.new { |hash, key| hash[key] = [] }
-    hash.each do |key, value|
+    group_by_length.inject(parity_hash) do |parity_hash,(key, value)|
       parity_hash[:odd].push(value) if key.odd?
       parity_hash[:even].push(value) if key.even?
+      parity_hash
     end
-    parity_hash
   end
 
 end
