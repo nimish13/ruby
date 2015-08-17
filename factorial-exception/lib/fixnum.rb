@@ -3,6 +3,7 @@ class Fixnum
   def calculate_factorial
     begin
       raise if self < 0
+      return 1 if self == 0
       (1..self).inject(:*)
     rescue
       'factorial for negative number cant be calculated'
